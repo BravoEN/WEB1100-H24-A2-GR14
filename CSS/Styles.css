@@ -1,0 +1,776 @@
+
+/* Felles */
+* {
+	font-family: sans-serif; 
+}
+
+html {
+	background-color: #303B4B;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+/* header og navbar */
+.flex-container {
+	display: flex;
+	justify-content: space-between;
+	background-color: #EAF3FF;
+	align-items:center;
+	border-bottom: 3px solid;
+	border-color: #F1B924;
+}
+
+.flex-item {
+	text-align:center;
+	color: white;
+	background-color: #303B4B;
+	padding: 5px 10px;
+	text-decoration: none;
+	margin: 0 15px;
+	border: 3px solid;
+	border-color: #F1B924;
+	border-radius:25px;
+	width:110px;
+	font-size:20px;
+}
+
+.hjem img {
+	height: 20px;
+}
+
+.dropbtn {
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+	padding: 5px 10px;
+	margin: 0 15px;
+	width:100px;
+}
+
+.meny-logo {
+	width:50px;
+}
+
+.flex-item:hover, .box-button:hover {
+	color: #F1B924;
+}
+
+.dropdown {
+	position: relative;
+}
+
+.dropdown-content {
+	display: none;
+	position:absolute;
+	right:0%;
+	background-color: #EAF3FF;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	margin-top: 0;
+}
+
+.dropdown-content a {
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+}
+
+.dropdown-content a:hover {
+	background-color: #94BDF3;
+}
+
+.dropdown:hover .dropdown-content {
+	display: block;
+}
+
+.logo {
+	width: 100px;
+}
+
+/* footer's */
+.flex-container-bot {
+	display: flex;
+	justify-content: space-between;
+	background-color: #EAF3FF;
+	align-items:center;
+	border-bottom: 3px solid;
+	border-top: 3px solid;
+	border-color: #F1B924;
+	margin-top:5px;
+}
+
+.footer-text {
+	text-align:center;
+	margin:20px;
+	width:160px;
+}
+
+.maps {
+	width:160px;
+	height:auto;
+	border:0; 
+}
+
+.flex-container-bottom {
+	display: flex;
+	justify-content: space-between;
+	padding:10px;
+}
+
+.footer-text-2 {
+	color:white;
+	margin:3px;
+}
+
+#terms {
+	text-decoration: none;
+	color: white;
+	text-align: right;
+	width: 150px;
+}
+
+#terms:hover {
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+
+/* Hjemmesiden */
+.box-align {
+	display:flex;
+	justify-content: space-around;
+	align-items:center;
+	min-height:560px;
+}
+
+.box {
+	width:350px;
+	height:400px;
+	padding:0px;
+	border:5px solid;
+	border-color:#F1B924;
+	border-radius:25px;
+	margin:30px;
+	background-color:#EAF3FF;
+}
+.box-button {
+	text-align:center;
+	color: white;
+	background-color: #303B4B;
+	padding: 5px 10px;
+	text-decoration: none;
+	margin: 0 15px;
+	margin-left:250px;
+	border: 2px solid;
+	border-color: #F1B924;
+	border-radius:25px;
+	width:80px;
+	font-size:10px;
+}
+
+.box-bilde {
+	width:350px;
+	height:240px;
+	border-radius:20px;
+}
+
+.box-text {
+	margin:20px;
+}
+
+/* Om lokalet */
+
+.spacer{
+    height: 50px
+}
+
+.lokaletTittel{
+    margin-left: 10px;
+    margin-top: 10%;
+    border: solid;
+    border-color: #F1B924;
+    border-radius: 25px;
+    padding: 5px;
+    display: initial;
+	color:white;
+}
+.lokaletDiv{
+    margin-left: 10px;
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+.lokaletAdresse{
+    margin-top: 10px;
+    margin-left: 10px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.lokaletAdresse p{
+    text-align: center;
+    border: 2px solid black;
+}
+
+.lokaletBilde{
+    height: auto;
+    width: auto;
+}
+
+.lokaletText {
+	color:white;
+}
+
+/* Tilbakemelding */
+
+.tbmain {
+	flex: 1;
+	margin: 50px 0px 0px 120px;
+}
+
+.tbtext {
+	color: #eaf3ff;
+	width: 800px;
+	font-size: 20px;
+}
+
+.tbtext h1 {
+	font-size: 60px;
+	text-align: center;
+	border: 5px solid #f4bc22;
+	border-radius: 25px;
+	padding: 5px 10px;
+	margin-bottom: 20px;
+} 
+
+.tbtext p {
+	margin-left: 40px;
+	width: 700px;
+}
+
+.tbmain label {
+	color: #eaf3ff;
+	margin-left: 40px;
+	font-size: 20px;
+}
+
+.input {
+	color: black;
+	background-color: #eaf3ff;
+	margin-left: 40px;
+	border-radius: 5px;
+	font-size: 20px;
+}
+
+.spacer-2 {
+	height:160px;
+}
+
+/*Om oss delen*/
+.spacer-3{
+    height: 70px
+}
+
+.omOssTittel{
+    margin-left: 10px;
+    margin-top: 10%;
+    border: solid;
+    border-color: #F1B924;
+    border-radius: 25px;
+    padding: 5px;
+    display: initial;
+	color:white;
+}
+	
+/* første tre avsnitt m/bilde*/
+
+.omOssDiv {
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+.omOssContent {
+    display: flex;
+    align-items: center; 
+}
+
+.omOssText {
+    margin: 5px 0 0 0; /* Adds space above the list */
+    padding: 50px;
+}
+
+.omOssText li {
+    margin-bottom: 20px; /* Adds space between each bullet point */
+}
+
+.omOssBilde {
+    width: 400px; 
+    height: auto;
+    margin-left: 120px; 
+}
+
+/*Vipps delen*/
+.vippsTittel {
+    color: white;
+}
+
+.vippsContent {
+    display: flex;
+    align-items: center;
+}
+
+.vippsText {
+    color: white;
+    margin: 0;
+    padding: 50px;
+}
+
+
+.vippsBilde {
+    width: 150px; /* Adjust width as needed */
+    height: auto;
+    margin-left: 70px; /* Space between text and image */
+}
+
+/* kontakt oss */
+
+/* Contact Section Styling */
+.contact-section {
+    display: flex;
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 20px;
+    gap: 30px;
+}
+
+.form-container, .contact-info {
+    flex: 1;
+    padding: 30px;
+    background-color: #3A3F44;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.form-container h1, .contact-info h2 {
+    color: #FFDF5D;
+}
+
+.form-container p, .contact-info p {
+    color: #CCCCCC;
+    margin-top: 10px;
+}
+
+.email-section label, .contact-section label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+.contact-section select, .contact-section textarea, .email-section input[type="email"] {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border: 1px solid #666666;
+    border-radius: 5px;
+    background-color: #23272A;
+    color: #FFFFFF;
+}
+
+.form-container textarea {
+    resize: vertical;
+}
+
+.email-section button {
+    background-color: #FFDF5D;
+    color: #23272A;
+    font-weight: bold;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.email-section button:hover {
+    background-color: #D4B74A;
+}
+
+/* Email Section Styling */
+.email-section {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #3A3F44;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.email-section label {
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+.email-section input[type="email"] {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border: 1px solid #666666;
+    border-radius: 5px;
+    background-color: #23272A;
+    color: #FFFFFF;
+}
+
+/* Map Section Styling */
+.map-section {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #3A3F44;
+    color: #FFDF5D;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.map-container {
+    width: 100%;
+    height: 150px; /* Adjusted height */
+    margin-top: 20px;
+    border: 1px solid #666666;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+/* Terms of Use */
+
+.tos {
+	color: #eaf3ff;
+}
+
+.tos h1 {
+	font-size: 60px;
+	text-align: center;
+	border: 5px solid #f4bc22;
+	border-radius: 25px;
+	padding: 5px 10px;
+	margin-bottom: 40px;
+	width: 400px;
+}
+
+.tos p {
+	margin-left: 40px;
+	width: 1200px;
+	font-size: 20px;
+}
+
+/* Spillevett */
+
+.flex-container-mid {
+	font-size: 15px;
+	color: white;
+	text-align: left;
+	border: 5px solid #f4bc22;
+	border-radius: 25px;
+	padding: 5px 5px;
+	margin-bottom: 20px;
+}
+ 
+.flex-container-mid {
+	margin-left: 10px;
+	width: 135px;
+}
+ 
+.Spillevett-liste {
+    color: white; /* Setter fargen til hvit */
+    font-size: 16px; /* Øker skriftstørrelsen*/
+}
+ 
+.Spillevett-liste li {
+    margin-bottom: 20px; /* Legger til litt mellomrom mellom punktene for bedre lesbarhet */
+}
+
+/* Bingohjelp */
+
+.Bingohjelp-main {
+    margin-bottom: 15px; /* Legger til mellomrom mellom avsnitt */
+	color: white;
+    text-align: center; /* Sentraliserer teksten */
+}
+
+#hvordan-spille {
+	align-content: center;
+}
+
+#hvordan-spille img {
+	border: 3px solid #f1b924;
+	border-radius: 25px;
+	width: 300px;
+	height: 300px;
+}
+
+/* Bingoark */
+
+.generate-btn {
+    cursor: pointer;
+}
+
+#bingoSheet {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 3px solid #F1B924;
+    border-radius: 15px;
+    background-color: #EAF3FF;
+    text-align: center;
+}
+
+#generateButton, #downloadButton {
+    color: white;
+    background-color: #303B4B;
+    padding: 10px 20px;
+    border: 3px solid #F1B924;
+    border-radius: 25px;
+    font-size: 18px;
+    text-align: center;
+    display: inline-block;
+}
+
+#generateButton:hover, #downloadButton:hover {
+    color: #F1B924; /* Change text color to yellow on hover */
+	cursor: pointer
+}
+
+
+
+/* statistikk */
+
+.statistikk table{
+    border-collapse: collapse;
+    width: 500px;
+    
+}
+
+.statistikk td{
+    border: 1px solid #f9f9f9;
+}
+
+.Blokk{
+    
+
+    top: 110px;
+}
+
+
+.tallStatistikk{
+
+
+    width: 500px;
+}
+
+.statistikk{
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    margin-top: 10px;
+	color:white;
+}
+
+.space{
+    height: 110px;
+}
+
+.spacer-4{
+    height: 90px
+}
+
+.Tittel{
+    margin-left: 10px;
+    margin-top: 10%;
+    border: solid;
+    border-color: #F1B924;
+    border-radius: 25px;
+    padding: 5px;
+    display: initial;
+	color:white;
+}
+
+/* 90ball */
+.test {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 90%;
+    padding: 5px;
+    border-left: 3px solid orange;
+    position: absolute;
+    top: 100;
+    right: 0;
+}
+
+.row1 {
+    display: flex;
+    height: 100%;
+}
+
+.balls {
+    color: #4b586b;
+    font-size: 3rem;
+    width: 10%;
+    text-align: center;
+    cursor: pointer;
+}
+
+.balls:hover{
+    color: #66768d;
+    font-size: 4rem;
+    width: 10%;
+    text-align: center;
+    cursor: pointer;
+}
+
+.balls.clicked {
+    color: white;
+}
+
+.tallting {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 25%;
+    height: 90%;
+    border-left: solid orange 3px;
+    left: 25%;
+}
+
+.inf {
+    color: white;
+    font-size: 27px;
+    height: 60px;
+    padding: 20px 7%;
+    width: 60%;
+}
+
+.tallting2 {
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+
+}
+
+#numbergatt {
+  color:white;
+  font-size: 27px; 
+  margin:26px;
+  position:relative;
+  right:5%;
+  width:35px;
+  border:solid orange;
+  border-radius: 20px;
+  padding:7px 10px;
+  z-index: 1;
+  background-color:#303b4b;
+}
+
+  
+.infor {
+  color:white;
+  font-size: 27px; 
+  margin:26px;
+  position:relative;
+  right:5%;
+  border:solid orange;
+  border-radius: 20px;
+  padding:7px 10px;
+
+}
+
+
+#tallgatt {
+    padding: 40px 0px 0px 7%;
+}
+
+.timer {
+    color: white;
+    font-size: 100px;
+    text-align: center;
+}
+
+
+.newnumber {
+  display: flex;
+  flex-direction:column;
+  align-items:center;
+  position: absolute;
+  width: 24.5%;
+  height: 90%;
+  color: white;
+ 
+}
+
+#big-number{
+  z-index: 1;
+  text-align:center;
+  color:#303b4b;
+  width:270px;
+  height:270px;
+  padding:10px;
+  margin:30px;
+  font-size:15rem;
+  background-color:white;
+  border-radius:100%;
+  border:solid orange 5px;
+  
+}
+
+
+#recent-numbers {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    text-align: center;
+    font-size: 4rem;
+    width: 90%;
+}
+
+#rekke {
+  border:none;
+  color:white;
+  margin-top:20px;
+  font-size:4rem;
+  width:80%%;
+  background-color:#303b4b;
+}
+
+#reset-button {
+  position:absolute;
+  top:700px;
+  font-size:3rem;
+  margin:50px;
+  padding:1px 15px;
+  color:white;
+  background-color:#303b4b;
+  border:solid orange;
+  border-radius:50px;
+}
+
+#reset-button:hover {
+  color:orange;
+  background-color:#303b4b;
+  border:solid orange;
+  border-radius:20px;
+}
+
+.spacer-5 {
+	height: 450px;
+}
+
+	

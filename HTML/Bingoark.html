@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bingoblokk</title>
+    <link rel="icon" href="../img/titleLogo.png" type="image/icon type">
+    <link rel='stylesheet' href='../CSS/Styles.css'>
+</head>
+<body>
+    <header>
+        <nav class='flex-container'>
+            <img src='../Img/logo.png' class='logo' alt='geithus bingo logo'>
+			<a href="home.html" class="flex-item hjem"><img src="../img/hjem.png" alt="hjem-knapp">Hjem</a>
+            <a class='flex-item' href='90ball.html' alt='90ball bingo'>90ball</a>
+            <a class='flex-item' href='bingoark.html' alt='bingoark'>Bingoark</a>
+            <a class='flex-item' href='oftestiltespørsmål.html' alt='hjelp'>Hjelp</a>
+            <div class='dropdown'>
+                <button class='dropbtn' alt='meny'><img src='../Img/meny.webp' class='meny-logo' alt='meny'></button>
+                <div class='dropdown-content'>
+                    <a href="Omlokalet.html" alt='om lokalet'>Om lokalet</a>
+                    <a href="Om_oss.html" alt='om oss'>Om oss</a>
+                    <a href="Tilbakemelding.html" alt='tilbakemelding'>Tilbakemelding</a>
+                    <a href="Kontaktoss.html" alt='kontakt oss'>Kontakt oss</a>
+                    <a href="Spillevett.html" alt='spillehjelp'>Spillevett</a>
+                    <a href="Statistikk.html" alt='statistikk'>Statistikk</a>
+                    <a href="Hvordanspille.html" alt='hvordan spille 90 ball bingo'>Hvordan spille 90 ball bingo</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main style="padding: 20px;">
+        <div class="bingo-label" style="position: absolute; top: 100px; left: 25px; color: white; border: 3px solid #F1B924; border-radius: 25px; padding: 0 10px;">
+            <h1>Bingoblokk</h1>
+        </div>
+
+        <div class="card" style="margin: auto; width: 400px; padding: 30px; border: 3px solid #F1B924; border-radius: 25px; background-color: #303B4B; color: white; text-align: center;">
+            <h2>90-Ball</h2>
+            <p>90-ball bingo spilles med et brett på 9x3 ruter. Fyller en, to eller tre rekker for å vinne</p>
+            
+            <button id="generateButton" class="generate-btn button-hover" style="color: white; background-color: #303B4B; padding: 10px 20px; border: 3px solid #F1B924; border-radius: 25px; font-size: 18px;">Generer</button>
+
+            <a id="downloadButton" class="download-btn button-hover" href="#" style="color: white; background-color: #303B4B; padding: 10px 20px; border: 3px solid #F1B924; border-radius: 25px; font-size: 18px; margin-top: 10px; display: none; text-decoration: none;">Last ned Bingo Blokk</a>
+        </div>
+        
+        <div id="bingoSheet" style="margin-top: 50px; display: flex; flex-direction: column; align-items: center;"></div>
+    </main>
+
+    <footer class='flex-container-bot'>
+        <a class='footer-text'>Åpningstider:<br>Kun åpent<br>tirsdag: 20:30 - 22:30</a>
+        <a class='footer-text'>Adresse:<br>Markaveien 16, 3360<br>Geithus</a>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1998.633824058956!2d9.9676541!3d59.9382181!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4640e20570ee7763%3A0xa841d52c17d8fb84!2sMarkaveien%2016%2C%203360%20Geithus!5e0!3m2!1sno!2sno!4v1729581970566!5m2!1sno!2sno" class='maps' allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" alt='kart'></iframe>
+    </footer>
+
+    <footer class='flex-container-bottom'>
+        <a class='footer-text-2'>Entertainment purposes only</a>
+        <a class='footer-text-2'>© Geithus Bingo 2024</a>
+        <a id="terms" href="terms.html" title='Terms of Use'>Terms of use</a>
+    </footer>
+
+    <script>
+        // Function to generate a 90-ball bingo sheet
+        function generateBingoSheet() {
+            const bingoSheet = [];
+            for (let i = 0; i < 3; i++) {
+                bingoSheet.push(generateBingoRow());
+            }
+            displayBingoSheet(bingoSheet);
+        }
+
+        // Function to generate a single row of 90-ball bingo
+        function generateBingoRow() {
+            let row = new Array(9).fill(null);
+            for (let i = 0; i < 5; i++) {
+                let column = Math.floor(Math.random() * 9);
+                while (row[column] !== null) {
+                    column = Math.floor(Math.random() * 9);
+                }
+                const min = column * 10 + (column === 0 ? 1 : 0);
+                const max = column * 10 + 9;
+                row[column] = Math.floor(Math.random() * (max - min + 1)) + min;
+            }
+            return row;
+        }
+
+        // Function to display the generated bingo sheet
+        function displayBingoSheet(sheet) {
+            const bingoContainer = document.getElementById("bingoSheet");
+            bingoContainer.innerHTML = ""; // Clear previous content
+            bingoContainer.style.border = "2px solid #F1B924";
+            bingoContainer.style.padding = "10px";
+            bingoContainer.style.backgroundColor = "#EAF3FF";
+            bingoContainer.innerHTML = "<h3>Din 90-ball bingoblokk</h3>";
+
+            let bingoContent = "";
+
+            sheet.forEach((row) => {
+                const rowDiv = document.createElement("div");
+                rowDiv.style.display = "flex";
+                rowDiv.style.gap = "10px";
+
+                row.forEach((num, colIndex) => {
+                    const cell = document.createElement("div");
+                    cell.textContent = num || "";
+                    cell.style.width = "30px";
+                    cell.style.height = "30px";
+                    cell.style.textAlign = "center";
+                    cell.style.border = "1px solid #303B4B";
+                    cell.style.backgroundColor = num ? "#fff" : "#d3d3d3";
+                    rowDiv.appendChild(cell);
+                    // Add to content for downloading, formatted with commas and new lines
+                    bingoContent += (num || "") + (colIndex < row.length - 1 ? "," : "") + " ";
+                });
+                bingoContainer.appendChild(rowDiv);
+                bingoContent += "\n"; // New line for next row
+            });
+
+            // Enable download button and set the content for download
+            document.getElementById("downloadButton").style.display = "block";
+            setDownloadLink(bingoContent.trim());
+        }
+
+        // Function to set download link for the bingo sheet
+        function setDownloadLink(content) {
+            const blob = new Blob([content], { type: 'text/plain' });
+            const url = URL.createObjectURL(blob);
+            const downloadButton = document.getElementById("downloadButton");
+            downloadButton.href = url;
+            downloadButton.download = 'bingo_sheet.txt';
+            downloadButton.onclick = function() {
+                setTimeout(() => URL.revokeObjectURL(url), 100); // Clean up the URL object after download
+            };
+        }
+
+        // Event listener for the "Generer" button
+        document.getElementById("generateButton").addEventListener("click", generateBingoSheet);
+    </script>
+</body>
+</html>
